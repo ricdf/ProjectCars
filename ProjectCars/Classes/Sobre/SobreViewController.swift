@@ -8,15 +8,33 @@
 
 import UIKit
 
-class SobreViewController: UIViewController {
+let URL_SOBRE = "http://www.livroiphone.com.br/carros/sobre.htm"
 
+class SobreViewController: UIViewController, UIWebViewDelegate {
+
+    @IBOutlet var webView : UIWebView!
+    @IBOutlet var progress : UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.webView.delegate = self
+        
         self.title = "Sobre"
+        
+        //iniciar a animaçao do activity indicator
+        self.progress.startAnimating()
+        //carrega a animacao no webview
+        let url = URL(string: URL_SOBRE)
+        let request = URLRequest(url: url!)
+        self.webView.loadRequest(request)
 
     }
 
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        //parar a animacao
+        progress.stopAnimating()
+    }
 
     /*
     // MARK: - Navigation

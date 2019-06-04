@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //criar os controllers
         let listaController = ListaCarrosViewController(nibName: "ListaCarrosViewController", bundle: nil)
-        let sobreController = SobreViewController(nibName: "SobreCiewController", bundle: nil)
+        let sobreController = SobreViewController(nibName: "SobreViewController", bundle: nil)
         let nav1 = UINavigationController()
         let nav2 = UINavigationController()
         
