@@ -11,7 +11,10 @@ import UIKit
 class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
    
     @IBOutlet var tableView : UITableView!
+    @IBOutlet var progress : UIActivityIndicatorView!
     var carros : Array<Carro> = []
+    var tipo : String = "classicos"
+    let imgRefresh = UIImage(named: "refresh.png")?.withRenderingMode(.alwaysOriginal)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +25,16 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register (UITableViewCell.self, forCellReuseIdentifier: "cell")
-        //adicionar os carros do array criado de varios carros
-        self.carros = CarroService.getCarros()
+
         //registrar no tableview que sera utilizado o CarroCell.xib
         let xib = UINib(nibName: "CarroCell", bundle: nil)
         self.tableView.register(xib, forCellReuseIdentifier: "cell")
+        self.buscarCarros()
+        
+        //botao refresh na navigation bar
+        let btAtualizar = UIBarButtonItem(image: imgRefresh, style: .plain, target: self, action: #selector(ListaCarrosViewController.atualizar))
+        self.navigationItem.rightBarButtonItem = btAtualizar
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,14 +42,14 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let linha = indexPath.row
-        let carro = carros[linha]
+        
         //chama o xib carrocell que é a celula personalizada
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell") as! CarroCell
-        
+        let linha = indexPath.row
+        let carro = self.carros[linha]
         cell.cellNome.text = carro.nome
         cell.cellDesc.text = carro.desc
-        cell.cellImg.image = UIImage(named: carro.url_foto)
+        cell.cellImg.setUrl(carro.url_foto)
         
         return cell
     }
@@ -56,16 +64,40 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
        // Alerta.alerta("Clicou no carro \(carro.nome)", viewController: self)
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func alteraTipo(sender: UISegmentedControl){
+        let idx = sender.selectedSegmentIndex
+        
+        switch(idx){
+        case 0:
+            self.tipo = "classicos"
+        case 1:
+            self.tipo = "esportivos"
+        default:
+            self.tipo = "luxo"
+        }
+        self.buscarCarros()
     }
-    */
-
+    
+    func buscarCarros(){
+        progress.startAnimating()
+        let callback = { (_ carros: Array<Carro>?, error:Error?) -> Void in
+       // CarroService.getCarrosByTipo(tipo, { (_ carros: Array<Carro>?, error:Error?) -> Void in
+        
+            if let carros = carros{
+                self.carros = carros
+                self.tableView.reloadData()
+                self.progress.stopAnimating()
+            }else if let error = error{
+                Alerta.alerta("Erro: " + error.localizedDescription, viewController: self)
+            }
+        }
+        CarroService.getCarrosByTipo(tipo, callback)
+    }
+        
+    @objc func atualizar(){
+        buscarCarros()
+    }
 }
+        
+
+

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaCarrosViewController" customModule="ProjectCars" customModuleProvider="target">
             <connections>
+                <outlet property="progress" destination="Zha-9p-H9i" id="tM5-YH-eEB"/>
                 <outlet property="tableView" destination="gf6-3Z-Jde" id="wRM-NO-NoS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,16 +23,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gf6-3Z-Jde">
-                    <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                    <rect key="frame" x="0.0" y="190" width="414" height="623"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g8M-N6-NNe">
+                    <rect key="frame" x="89" y="124" width="236" height="29"/>
+                    <segments>
+                        <segment title="Clássicos"/>
+                        <segment title="Esportivos"/>
+                        <segment title="Luxo"/>
+                    </segments>
+                    <connections>
+                        <action selector="alteraTipoWithSender:" destination="-1" eventType="valueChanged" id="OGr-BF-zVK"/>
+                    </connections>
+                </segmentedControl>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zha-9p-H9i">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="gf6-3Z-Jde" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="08C-t3-qQy"/>
-                <constraint firstItem="gf6-3Z-Jde" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="1Yy-wj-a0g"/>
-                <constraint firstItem="gf6-3Z-Jde" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AL1-cp-lCg"/>
-                <constraint firstAttribute="trailing" secondItem="gf6-3Z-Jde" secondAttribute="trailing" id="UHt-zN-YMY"/>
+                <constraint firstItem="gf6-3Z-Jde" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="102" id="89T-5X-Nbv"/>
+                <constraint firstItem="gf6-3Z-Jde" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Aij-C6-EgV"/>
+                <constraint firstItem="gf6-3Z-Jde" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F1c-kY-IVa"/>
+                <constraint firstItem="g8M-N6-NNe" firstAttribute="centerX" secondItem="gf6-3Z-Jde" secondAttribute="centerX" id="Kn9-zL-Dez"/>
+                <constraint firstItem="g8M-N6-NNe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="hxj-a8-cKU"/>
+                <constraint firstAttribute="trailing" secondItem="gf6-3Z-Jde" secondAttribute="trailing" id="tpA-cF-Vul"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

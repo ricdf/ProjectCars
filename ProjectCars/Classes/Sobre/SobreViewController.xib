@@ -27,17 +27,17 @@
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </webView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="l9P-z6-aCt">
-                    <rect key="frame" x="197" y="440" width="20" height="20"/>
+                    <rect key="frame" x="197" y="440.5" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="oJG-sK-QEY" firstAttribute="centerX" secondItem="l9P-z6-aCt" secondAttribute="centerX" id="5GI-CF-xBB"/>
-                <constraint firstAttribute="trailing" secondItem="oJG-sK-QEY" secondAttribute="trailing" id="NbD-X1-7TT"/>
-                <constraint firstItem="oJG-sK-QEY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Udj-gs-Hvp"/>
-                <constraint firstItem="oJG-sK-QEY" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="biv-bD-IVR"/>
-                <constraint firstItem="oJG-sK-QEY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jlS-qx-0Kx"/>
-                <constraint firstItem="oJG-sK-QEY" firstAttribute="centerY" secondItem="l9P-z6-aCt" secondAttribute="centerY" id="o5x-4n-xVT"/>
+                <constraint firstItem="oJG-sK-QEY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IWQ-Q9-bIv"/>
+                <constraint firstItem="oJG-sK-QEY" firstAttribute="centerX" secondItem="l9P-z6-aCt" secondAttribute="centerX" id="Jow-bE-GtT"/>
+                <constraint firstItem="oJG-sK-QEY" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="O5w-TL-MA4"/>
+                <constraint firstAttribute="trailing" secondItem="oJG-sK-QEY" secondAttribute="trailing" id="hbT-gj-fcb"/>
+                <constraint firstItem="oJG-sK-QEY" firstAttribute="centerY" secondItem="l9P-z6-aCt" secondAttribute="centerY" id="kAy-WN-hpb"/>
+                <constraint firstItem="oJG-sK-QEY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qlj-G9-cWn"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

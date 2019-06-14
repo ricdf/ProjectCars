@@ -10,7 +10,7 @@ import UIKit
 
 class DetalhesCarroViewController: UIViewController {
 
-    @IBOutlet var img : UIImageView!
+    @IBOutlet var img : DownloadImageView!
     @IBOutlet var tDesc : UITextView!
     
     var carro : Carro?
@@ -21,11 +21,26 @@ class DetalhesCarroViewController: UIViewController {
         if let c = carro{
             self.title = c.nome
             self.tDesc.text = c.desc
-            let img = UIImage(named: c.url_foto)
-            self.img.image = img
+            self.img.setUrl(c.url_foto)
         }
     }
 
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        var text=""
+        switch UIDevice.current.orientation{
+        case .portrait:
+            text="Portrait"
+        case .portraitUpsideDown:
+            text="PortraitUpsideDown"
+        case .landscapeLeft:
+            text="LandscapeLeft"
+        case .landscapeRight:
+            text="LandscapeRight"
+        default:
+            text="Another"
+        }
+        NSLog("You have moved: \(text)")
+    }
 
     /*
     // MARK: - Navigation

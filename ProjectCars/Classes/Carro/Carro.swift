@@ -16,7 +16,7 @@ import Foundation
         var url_info: String = ""
         var url_video: String = ""
         //coordenadas da fabrica ou pais de origem do carro
-        var latidude: String = ""
+        var latitude: String = ""
         var longitude: String = ""
         
     }
