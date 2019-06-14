@@ -12,6 +12,8 @@ class DetalhesCarroViewController: UIViewController {
 
     @IBOutlet var img : DownloadImageView!
     @IBOutlet var tDesc : UITextView!
+    let imgDeleta = UIImage(named: "deleta.png")?.withRenderingMode(.alwaysOriginal)
+
     
     var carro : Carro?
     
@@ -22,6 +24,9 @@ class DetalhesCarroViewController: UIViewController {
             self.title = c.nome
             self.tDesc.text = c.desc
             self.img.setUrl(c.url_foto)
+            //inserir botao de deletar na navigation bar
+            let btDeleta = UIBarButtonItem(image: imgDeleta, style: .plain, target: self, action: #selector(DetalhesCarroViewController.onClickDeletar))
+            self.navigationItem.rightBarButtonItem = btDeleta
         }
     }
 
@@ -42,14 +47,27 @@ class DetalhesCarroViewController: UIViewController {
         NSLog("You have moved: \(text)")
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func  onClickDeletar() {
+        let alert = UIAlertController(title: "Confirma ? ", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: {(alert: UIAlertAction!) in self.deletar()}))
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .destructive, handler: {(alert: UIAlertAction!) in}))
+        self.present(alert, animated: true, completion: nil)
     }
-    */
+    
+    func deletar(){
+        let db = CarroDB()
+        db.delete(self.carro!)
+        print()
+        //mostrar um alerta
+        Alerta.alerta("Carro excluído com sucesso!", viewController: self, action:
+            {
+                (UIAlertAction) -> Void in
+                self.goBack()
+        })
+    }
+    
+    func goBack(){
+        self.navigationController!.popViewController(animated: true)
+    }
 
 }

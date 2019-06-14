@@ -10,6 +10,8 @@ import Foundation
     
     class Carro{
         
+        var id = 0 //id do banco de dados
+        var tipo = "" //tipo= classicos, esportivos e luxo
         var nome: String = ""
         var desc: String = ""
         var url_foto: String = ""

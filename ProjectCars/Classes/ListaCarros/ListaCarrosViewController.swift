@@ -12,6 +12,8 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
    
     @IBOutlet var tableView : UITableView!
     @IBOutlet var progress : UIActivityIndicatorView!
+    @IBOutlet var segmentControl : UISegmentedControl!
+    
     var carros : Array<Carro> = []
     var tipo : String = "classicos"
     let imgRefresh = UIImage(named: "refresh.png")?.withRenderingMode(.alwaysOriginal)
@@ -29,12 +31,27 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
         //registrar no tableview que sera utilizado o CarroCell.xib
         let xib = UINib(nibName: "CarroCell", bundle: nil)
         self.tableView.register(xib, forCellReuseIdentifier: "cell")
-        self.buscarCarros()
+        self.buscarCarros(true) //busca carro com cache
         
         //botao refresh na navigation bar
         let btAtualizar = UIBarButtonItem(image: imgRefresh, style: .plain, target: self, action: #selector(ListaCarrosViewController.atualizar))
         self.navigationItem.rightBarButtonItem = btAtualizar
         
+        //recuperar o tipo salvo nas preferencia, tipo do carro do usuario que deixou na ultima vez q usou o app
+        let idx = Prefs.getInt("tipoIdx")
+        let s = Prefs.getString("tipoString")
+        if(s != nil){ // a string é opcional , precisamos testar antes
+            self.tipo = s!
+        }
+         self.segmentControl.selectedSegmentIndex = idx
+       // self.buscarCarros(true) //busca carro com cache
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+           self.buscarCarros(true) //busca carro com cache, sempre q a tela é exibida ao usuario
+        print(carros.count)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,10 +92,16 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
         default:
             self.tipo = "luxo"
         }
-        self.buscarCarros()
+        
+        //salvar o tipo nas prefs
+        Prefs.setInt(idx, chave: "tipoIdx")
+        Prefs.setString(tipo, chave: "tipoString")
+        
+        //buscar os carros pelo tipo selecionado
+        self.buscarCarros(true) //busca carro com cache
     }
     
-    func buscarCarros(){
+    func buscarCarros(_ cache: Bool){
         progress.startAnimating()
         let callback = { (_ carros: Array<Carro>?, error:Error?) -> Void in
        // CarroService.getCarrosByTipo(tipo, { (_ carros: Array<Carro>?, error:Error?) -> Void in
@@ -91,11 +114,11 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
                 Alerta.alerta("Erro: " + error.localizedDescription, viewController: self)
             }
         }
-        CarroService.getCarrosByTipo(tipo, callback)
+        CarroService.getCarrosByTipo(tipo, cache, callback)
     }
         
     @objc func atualizar(){
-        buscarCarros()
+        buscarCarros(false)
     }
 }
         

@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaCarrosViewController" customModule="ProjectCars" customModuleProvider="target">
             <connections>
                 <outlet property="progress" destination="Zha-9p-H9i" id="tM5-YH-eEB"/>
+                <outlet property="segmentControl" destination="g8M-N6-NNe" id="DLM-ae-hJ7"/>
                 <outlet property="tableView" destination="gf6-3Z-Jde" id="wRM-NO-NoS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

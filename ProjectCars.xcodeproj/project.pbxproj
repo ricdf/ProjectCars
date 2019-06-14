@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4406E5D622AEAF8C0053BBBF /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5CF22AEAF8B0053BBBF /* DownloadImageView.swift */; };
-		4406E5D722AEAF8C0053BBBF /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5D022AEAF8B0053BBBF /* StringUtils.swift */; };
 		4406E5D822AEAF8C0053BBBF /* DetalhesCarroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5D122AEAF8B0053BBBF /* DetalhesCarroViewController.swift */; };
 		4406E5D922AEAF8C0053BBBF /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5D222AEAF8B0053BBBF /* Alerta.swift */; };
 		4406E5DA22AEAF8C0053BBBF /* DetalhesCarroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4406E5D322AEAF8B0053BBBF /* DetalhesCarroViewController.xib */; };
@@ -37,7 +36,16 @@
 		4411539222A7FFC40023FBCF /* CarroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411539122A7FFC40023FBCF /* CarroService.swift */; };
 		4411539422A808DD0023FBCF /* CarroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411539322A808DD0023FBCF /* CarroCell.swift */; };
 		4411539622A809770023FBCF /* CarroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4411539522A809770023FBCF /* CarroCell.xib */; };
-		44D0FEE622B3F51D0026A94F /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0FEE522B3F51D0026A94F /* refresh.png */; };
+		4434255B22B4233B00184D60 /* PrefsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434255A22B4233B00184D60 /* PrefsFile.swift */; };
+		4434256122B42ABE00184D60 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434256022B42ABD00184D60 /* StringUtils.swift */; };
+		44D0FEEA22B3F67E0026A94F /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0FEE922B3F67E0026A94F /* refresh.png */; };
+		44D0FEEC22B3F7DF0026A94F /* IconAPP.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0FEEB22B3F7DF0026A94F /* IconAPP.png */; };
+		44D0FEEF22B4171E0026A94F /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0FEED22B4170E0026A94F /* Prefs.swift */; };
+		44F5D23222B433080080925A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F5D23122B433080080925A /* libsqlite3.tbd */; };
+		44F5D23522B434470080925A /* SQLiteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5D23422B434470080925A /* SQLiteHelper.swift */; };
+		44F5D23922B434F10080925A /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5D23822B434F10080925A /* SQLiteObjc.m */; };
+		44F5D23B22B4390D0080925A /* CarroDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5D23A22B4390D0080925A /* CarroDB.swift */; };
+		44F5D23D22B444CB0080925A /* deleta.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5D23C22B444CA0080925A /* deleta.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		4406E5CF22AEAF8B0053BBBF /* DownloadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
-		4406E5D022AEAF8B0053BBBF /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		4406E5D122AEAF8B0053BBBF /* DetalhesCarroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesCarroViewController.swift; sourceTree = "<group>"; };
 		4406E5D222AEAF8B0053BBBF /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		4406E5D322AEAF8B0053BBBF /* DetalhesCarroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalhesCarroViewController.xib; sourceTree = "<group>"; };
@@ -94,7 +101,19 @@
 		4411539122A7FFC40023FBCF /* CarroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroService.swift; sourceTree = "<group>"; };
 		4411539322A808DD0023FBCF /* CarroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroCell.swift; sourceTree = "<group>"; };
 		4411539522A809770023FBCF /* CarroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarroCell.xib; sourceTree = "<group>"; };
-		44D0FEE522B3F51D0026A94F /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		4434255A22B4233B00184D60 /* PrefsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsFile.swift; sourceTree = "<group>"; };
+		4434256022B42ABD00184D60 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		44D0FEE922B3F67E0026A94F /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		44D0FEEB22B3F7DF0026A94F /* IconAPP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconAPP.png; path = Resources/Imagens/IconAPP.png; sourceTree = SOURCE_ROOT; };
+		44D0FEED22B4170E0026A94F /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		44F5D23122B433080080925A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		44F5D23322B4335E0080925A /* ProjectCars-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProjectCars-Bridging-Header.h"; sourceTree = "<group>"; };
+		44F5D23422B434470080925A /* SQLiteHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteHelper.swift; sourceTree = "<group>"; };
+		44F5D23622B434E20080925A /* SQLiteObjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteObjc.h; sourceTree = "<group>"; };
+		44F5D23722B434F00080925A /* ProjectCars-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProjectCars-Bridging-Header.h"; sourceTree = "<group>"; };
+		44F5D23822B434F10080925A /* SQLiteObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteObjc.m; sourceTree = "<group>"; };
+		44F5D23A22B4390D0080925A /* CarroDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroDB.swift; sourceTree = "<group>"; };
+		44F5D23C22B444CA0080925A /* deleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleta.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F5D23222B433080080925A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +150,7 @@
 				4411534422A6DFEB0023FBCF /* ProjectCarsTests */,
 				4411534F22A6DFEB0023FBCF /* ProjectCarsUITests */,
 				4411532E22A6DFE90023FBCF /* Products */,
+				44F5D23022B433080080925A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +168,15 @@
 			isa = PBXGroup;
 			children = (
 				4411533022A6DFE90023FBCF /* AppDelegate.swift */,
+				44F5D23822B434F10080925A /* SQLiteObjc.m */,
+				44F5D23422B434470080925A /* SQLiteHelper.swift */,
+				44F5D23622B434E20080925A /* SQLiteObjc.h */,
+				44F5D23322B4335E0080925A /* ProjectCars-Bridging-Header.h */,
+				4434256022B42ABD00184D60 /* StringUtils.swift */,
 				4411533922A6DFEB0023FBCF /* LaunchScreen.storyboard */,
 				4411533C22A6DFEB0023FBCF /* Info.plist */,
 				4411538822A6E62B0023FBCF /* Classes */,
+				44F5D23722B434F00080925A /* ProjectCars-Bridging-Header.h */,
 			);
 			path = ProjectCars;
 			sourceTree = "<group>";
@@ -205,7 +232,9 @@
 		4411536722A6E46D0023FBCF /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
-				44D0FEE522B3F51D0026A94F /* refresh.png */,
+				44D0FEEB22B3F7DF0026A94F /* IconAPP.png */,
+				44D0FEE922B3F67E0026A94F /* refresh.png */,
+				44F5D23C22B444CA0080925A /* deleta.png */,
 				4411536822A6E46D0023FBCF /* tab_carros.png */,
 				4411536922A6E46D0023FBCF /* tab_sobre@2x.png */,
 				4411536A22A6E46D0023FBCF /* mclaren.png */,
@@ -239,13 +268,14 @@
 		4411538A22A6E6DD0023FBCF /* ListaCarros */ = {
 			isa = PBXGroup;
 			children = (
+				44D0FEED22B4170E0026A94F /* Prefs.swift */,
+				4434255A22B4233B00184D60 /* PrefsFile.swift */,
 				4406E5D222AEAF8B0053BBBF /* Alerta.swift */,
 				4406E5D122AEAF8B0053BBBF /* DetalhesCarroViewController.swift */,
 				4406E5D322AEAF8B0053BBBF /* DetalhesCarroViewController.xib */,
 				4406E5CF22AEAF8B0053BBBF /* DownloadImageView.swift */,
 				4406E5D522AEAF8B0053BBBF /* ListaCarrosViewController.swift */,
 				4406E5D422AEAF8B0053BBBF /* ListaCarrosViewController.xib */,
-				4406E5D022AEAF8B0053BBBF /* StringUtils.swift */,
 			);
 			path = ListaCarros;
 			sourceTree = "<group>";
@@ -254,11 +284,20 @@
 			isa = PBXGroup;
 			children = (
 				4411538F22A7FF270023FBCF /* Carro.swift */,
+				44F5D23A22B4390D0080925A /* CarroDB.swift */,
 				4411539122A7FFC40023FBCF /* CarroService.swift */,
 				4411539322A808DD0023FBCF /* CarroCell.swift */,
 				4411539522A809770023FBCF /* CarroCell.xib */,
 			);
 			path = Carro;
+			sourceTree = "<group>";
+		};
+		44F5D23022B433080080925A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44F5D23122B433080080925A /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +368,7 @@
 				TargetAttributes = {
 					4411532C22A6DFE90023FBCF = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -371,13 +411,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4406E5DA22AEAF8C0053BBBF /* DetalhesCarroViewController.xib in Resources */,
-				44D0FEE622B3F51D0026A94F /* refresh.png in Resources */,
+				44D0FEEA22B3F67E0026A94F /* refresh.png in Resources */,
 				4411537722A6E46D0023FBCF /* mclaren.png in Resources */,
 				4411537222A6E46D0023FBCF /* carros_classicos.json in Resources */,
 				4411537822A6E46D0023FBCF /* ferrari_ff.png in Resources */,
 				4411538722A6E60F0023FBCF /* SobreViewController.xib in Resources */,
 				4411537522A6E46D0023FBCF /* tab_carros.png in Resources */,
 				4411537022A6E46D0023FBCF /* carros_luxo.xml in Resources */,
+				44F5D23D22B444CB0080925A /* deleta.png in Resources */,
 				4411539622A809770023FBCF /* CarroCell.xib in Resources */,
 				4411536F22A6E46D0023FBCF /* carros_classicos.xml in Resources */,
 				4411537B22A6E46D0023FBCF /* tab_carros@2x.png in Resources */,
@@ -396,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D0FEEC22B3F7DF0026A94F /* IconAPP.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,13 +455,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4406E5D722AEAF8C0053BBBF /* StringUtils.swift in Sources */,
+				4434256122B42ABE00184D60 /* StringUtils.swift in Sources */,
+				44D0FEEF22B4171E0026A94F /* Prefs.swift in Sources */,
 				4406E5DC22AEAF8C0053BBBF /* ListaCarrosViewController.swift in Sources */,
+				44F5D23922B434F10080925A /* SQLiteObjc.m in Sources */,
 				4411539422A808DD0023FBCF /* CarroCell.swift in Sources */,
 				4406E5D622AEAF8C0053BBBF /* DownloadImageView.swift in Sources */,
 				4406E5D822AEAF8C0053BBBF /* DetalhesCarroViewController.swift in Sources */,
 				4411539022A7FF270023FBCF /* Carro.swift in Sources */,
 				4406E5D922AEAF8C0053BBBF /* Alerta.swift in Sources */,
+				44F5D23B22B4390D0080925A /* CarroDB.swift in Sources */,
+				44F5D23522B434470080925A /* SQLiteHelper.swift in Sources */,
+				4434255B22B4233B00184D60 /* PrefsFile.swift in Sources */,
 				4411538622A6E60F0023FBCF /* SobreViewController.swift in Sources */,
 				4411539222A7FFC40023FBCF /* CarroService.swift in Sources */,
 				4411533122A6DFE90023FBCF /* AppDelegate.swift in Sources */,
@@ -592,6 +639,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69TKL86UBS;
 				INFOPLIST_FILE = ProjectCars/Info.plist;
@@ -601,6 +649,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.rcbnet.ProjectCars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectCars/ProjectCars-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -611,6 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69TKL86UBS;
 				INFOPLIST_FILE = ProjectCars/Info.plist;
@@ -620,6 +671,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.rcbnet.ProjectCars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ProjectCars/ProjectCars-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

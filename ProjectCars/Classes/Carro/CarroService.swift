@@ -10,9 +10,21 @@ import Foundation
 
 class CarroService {
     
-    class func getCarrosByTipo(_ tipo: String, _ callback: @escaping (_ carros:Array<Carro>?, _ error:Error?) -> Void) {
+    class func getCarrosByTipo(_ tipo: String, _ cache:Bool, _ callback: @escaping (_ carros:Array<Carro>?, _ error:Error?) -> Void) {
         
-        // Cria a URL e Request
+        let db = CarroDB()
+        //let carros = db.getCarrosByTipo(tipo)//busca os carros no banco de dados
+        //db.close()
+        //busca os carros do bd ou cria um array vazio para os dados virem do web service
+        let carros : Array<Carro> = cache ? db.getCarrosByTipo(tipo) : []
+        //se existir no banco de dados retorna
+        if(carros.count > 0){
+            callback(carros,nil)
+            print("Retornando carros \(tipo) do banco")
+            return
+        }
+        
+        // Cria a URL e Request do web service
         let http = URLSession.shared
         let url = URL(string:"http://www.livroiphone.com.br/carros/v2/carros_"+tipo+".json")!
         let request = URLRequest(url: url)
@@ -32,7 +44,18 @@ class CarroService {
         })
         task.resume()
     }
-    
+    //salvar os carros no banco de dados
+    class func saveCarros(_ carros: Array<Carro>, tipo:String ) {
+        if(carros.count > 0){
+            let db = CarroDB()
+            db.deleteCarrosTipo(tipo)
+            for c in carros{
+                c.tipo = tipo
+                db.save(c)
+            }
+            db.close()
+        }
+    }
     
     // Parser JSON
     class func parserJson(_ data: Data) -> Array<Carro> {

@@ -41,6 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = tabBarController
         self.window!.makeKeyAndVisible()
         
+        //crair o banco de dados e as tabelas
+        let db = CarroDB()
+        db.createTables()
+        db.close()
+        
         return true
     }
 
