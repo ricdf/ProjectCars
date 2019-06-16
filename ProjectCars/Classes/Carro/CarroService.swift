@@ -37,6 +37,7 @@ class CarroService {
             }
             if let data = data{
                 let carros = CarroService.parserJson(data)
+                saveCarros(carros, tipo: tipo) //salva os carros no BD
                 DispatchQueue.main.async {
                     callback(carros,nil)
                 }

@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4406E5D622AEAF8C0053BBBF /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5CF22AEAF8B0053BBBF /* DownloadImageView.swift */; };
-		4406E5D822AEAF8C0053BBBF /* DetalhesCarroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5D122AEAF8B0053BBBF /* DetalhesCarroViewController.swift */; };
-		4406E5D922AEAF8C0053BBBF /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5D222AEAF8B0053BBBF /* Alerta.swift */; };
-		4406E5DA22AEAF8C0053BBBF /* DetalhesCarroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4406E5D322AEAF8B0053BBBF /* DetalhesCarroViewController.xib */; };
-		4406E5DB22AEAF8C0053BBBF /* ListaCarrosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4406E5D422AEAF8B0053BBBF /* ListaCarrosViewController.xib */; };
-		4406E5DC22AEAF8C0053BBBF /* ListaCarrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406E5D522AEAF8B0053BBBF /* ListaCarrosViewController.swift */; };
 		4411533122A6DFE90023FBCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411533022A6DFE90023FBCF /* AppDelegate.swift */; };
 		4411533B22A6DFEB0023FBCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4411533922A6DFEB0023FBCF /* LaunchScreen.storyboard */; };
 		4411534622A6DFEB0023FBCF /* ProjectCarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411534522A6DFEB0023FBCF /* ProjectCarsTests.swift */; };
@@ -36,16 +30,28 @@
 		4411539222A7FFC40023FBCF /* CarroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411539122A7FFC40023FBCF /* CarroService.swift */; };
 		4411539422A808DD0023FBCF /* CarroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411539322A808DD0023FBCF /* CarroCell.swift */; };
 		4411539622A809770023FBCF /* CarroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4411539522A809770023FBCF /* CarroCell.xib */; };
-		4434255B22B4233B00184D60 /* PrefsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434255A22B4233B00184D60 /* PrefsFile.swift */; };
+		4414868222B4BBA800F303A1 /* ListaCarrosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4414867922B4BBA700F303A1 /* ListaCarrosViewController.xib */; };
+		4414868422B4BBA800F303A1 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414867B22B4BBA700F303A1 /* Prefs.swift */; };
+		4414868522B4BBA800F303A1 /* PrefsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414867C22B4BBA700F303A1 /* PrefsFile.swift */; };
+		4414868622B4BBA800F303A1 /* DetalhesCarroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4414867D22B4BBA700F303A1 /* DetalhesCarroViewController.xib */; };
+		4414868722B4BBA800F303A1 /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414867E22B4BBA700F303A1 /* DownloadImageView.swift */; };
+		4414868922B4BBA800F303A1 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414868022B4BBA700F303A1 /* Alerta.swift */; };
+		4414868A22B4BBA800F303A1 /* DetalhesCarroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414868122B4BBA700F303A1 /* DetalhesCarroViewController.swift */; };
+		4414868C22B4BBC700F303A1 /* ListaCarrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414868B22B4BBC600F303A1 /* ListaCarrosViewController.swift */; };
+		4414868F22B644C400F303A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414868D22B644C400F303A1 /* MapViewController.swift */; };
+		4414869022B644C400F303A1 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4414868E22B644C400F303A1 /* MapViewController.xib */; };
+		4414869222B64F5E00F303A1 /* GpsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414869122B64F5E00F303A1 /* GpsMapViewController.swift */; };
 		4434256122B42ABE00184D60 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434256022B42ABD00184D60 /* StringUtils.swift */; };
 		44D0FEEA22B3F67E0026A94F /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0FEE922B3F67E0026A94F /* refresh.png */; };
 		44D0FEEC22B3F7DF0026A94F /* IconAPP.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0FEEB22B3F7DF0026A94F /* IconAPP.png */; };
-		44D0FEEF22B4171E0026A94F /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0FEED22B4170E0026A94F /* Prefs.swift */; };
 		44F5D23222B433080080925A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F5D23122B433080080925A /* libsqlite3.tbd */; };
 		44F5D23522B434470080925A /* SQLiteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5D23422B434470080925A /* SQLiteHelper.swift */; };
 		44F5D23922B434F10080925A /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5D23822B434F10080925A /* SQLiteObjc.m */; };
 		44F5D23B22B4390D0080925A /* CarroDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F5D23A22B4390D0080925A /* CarroDB.swift */; };
 		44F5D23D22B444CB0080925A /* deleta.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5D23C22B444CA0080925A /* deleta.png */; };
+		44F5D23F22B49D860080925A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F5D23E22B49D860080925A /* MapKit.framework */; };
+		44F5D24122B49D900080925A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F5D24022B49D900080925A /* CoreLocation.framework */; };
+		44F5D24322B49F410080925A /* google-maps.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F5D24222B49F410080925A /* google-maps.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4406E5CF22AEAF8B0053BBBF /* DownloadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
-		4406E5D122AEAF8B0053BBBF /* DetalhesCarroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesCarroViewController.swift; sourceTree = "<group>"; };
-		4406E5D222AEAF8B0053BBBF /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
-		4406E5D322AEAF8B0053BBBF /* DetalhesCarroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalhesCarroViewController.xib; sourceTree = "<group>"; };
-		4406E5D422AEAF8B0053BBBF /* ListaCarrosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaCarrosViewController.xib; sourceTree = "<group>"; };
-		4406E5D522AEAF8B0053BBBF /* ListaCarrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaCarrosViewController.swift; sourceTree = "<group>"; };
 		4411532D22A6DFE90023FBCF /* ProjectCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4411533022A6DFE90023FBCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4411533A22A6DFEB0023FBCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,11 +101,20 @@
 		4411539122A7FFC40023FBCF /* CarroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroService.swift; sourceTree = "<group>"; };
 		4411539322A808DD0023FBCF /* CarroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroCell.swift; sourceTree = "<group>"; };
 		4411539522A809770023FBCF /* CarroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarroCell.xib; sourceTree = "<group>"; };
-		4434255A22B4233B00184D60 /* PrefsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsFile.swift; sourceTree = "<group>"; };
+		4414867922B4BBA700F303A1 /* ListaCarrosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaCarrosViewController.xib; sourceTree = "<group>"; };
+		4414867B22B4BBA700F303A1 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		4414867C22B4BBA700F303A1 /* PrefsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsFile.swift; sourceTree = "<group>"; };
+		4414867D22B4BBA700F303A1 /* DetalhesCarroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalhesCarroViewController.xib; sourceTree = "<group>"; };
+		4414867E22B4BBA700F303A1 /* DownloadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
+		4414868022B4BBA700F303A1 /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		4414868122B4BBA700F303A1 /* DetalhesCarroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesCarroViewController.swift; sourceTree = "<group>"; };
+		4414868B22B4BBC600F303A1 /* ListaCarrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaCarrosViewController.swift; sourceTree = "<group>"; };
+		4414868D22B644C400F303A1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4414868E22B644C400F303A1 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		4414869122B64F5E00F303A1 /* GpsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpsMapViewController.swift; sourceTree = "<group>"; };
 		4434256022B42ABD00184D60 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		44D0FEE922B3F67E0026A94F /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		44D0FEEB22B3F7DF0026A94F /* IconAPP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IconAPP.png; path = Resources/Imagens/IconAPP.png; sourceTree = SOURCE_ROOT; };
-		44D0FEED22B4170E0026A94F /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		44F5D23122B433080080925A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		44F5D23322B4335E0080925A /* ProjectCars-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProjectCars-Bridging-Header.h"; sourceTree = "<group>"; };
 		44F5D23422B434470080925A /* SQLiteHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteHelper.swift; sourceTree = "<group>"; };
@@ -114,6 +123,9 @@
 		44F5D23822B434F10080925A /* SQLiteObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteObjc.m; sourceTree = "<group>"; };
 		44F5D23A22B4390D0080925A /* CarroDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroDB.swift; sourceTree = "<group>"; };
 		44F5D23C22B444CA0080925A /* deleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleta.png; sourceTree = "<group>"; };
+		44F5D23E22B49D860080925A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		44F5D24022B49D900080925A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		44F5D24222B49F410080925A /* google-maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-maps.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F5D24122B49D900080925A /* CoreLocation.framework in Frameworks */,
+				44F5D23F22B49D860080925A /* MapKit.framework in Frameworks */,
 				44F5D23222B433080080925A /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +249,7 @@
 				44D0FEEB22B3F7DF0026A94F /* IconAPP.png */,
 				44D0FEE922B3F67E0026A94F /* refresh.png */,
 				44F5D23C22B444CA0080925A /* deleta.png */,
+				44F5D24222B49F410080925A /* google-maps.png */,
 				4411536822A6E46D0023FBCF /* tab_carros.png */,
 				4411536922A6E46D0023FBCF /* tab_sobre@2x.png */,
 				4411536A22A6E46D0023FBCF /* mclaren.png */,
@@ -268,14 +283,17 @@
 		4411538A22A6E6DD0023FBCF /* ListaCarros */ = {
 			isa = PBXGroup;
 			children = (
-				44D0FEED22B4170E0026A94F /* Prefs.swift */,
-				4434255A22B4233B00184D60 /* PrefsFile.swift */,
-				4406E5D222AEAF8B0053BBBF /* Alerta.swift */,
-				4406E5D122AEAF8B0053BBBF /* DetalhesCarroViewController.swift */,
-				4406E5D322AEAF8B0053BBBF /* DetalhesCarroViewController.xib */,
-				4406E5CF22AEAF8B0053BBBF /* DownloadImageView.swift */,
-				4406E5D522AEAF8B0053BBBF /* ListaCarrosViewController.swift */,
-				4406E5D422AEAF8B0053BBBF /* ListaCarrosViewController.xib */,
+				4414868022B4BBA700F303A1 /* Alerta.swift */,
+				4414868122B4BBA700F303A1 /* DetalhesCarroViewController.swift */,
+				4414867D22B4BBA700F303A1 /* DetalhesCarroViewController.xib */,
+				4414867E22B4BBA700F303A1 /* DownloadImageView.swift */,
+				4414868B22B4BBC600F303A1 /* ListaCarrosViewController.swift */,
+				4414867922B4BBA700F303A1 /* ListaCarrosViewController.xib */,
+				4414868D22B644C400F303A1 /* MapViewController.swift */,
+				4414868E22B644C400F303A1 /* MapViewController.xib */,
+				4414869122B64F5E00F303A1 /* GpsMapViewController.swift */,
+				4414867B22B4BBA700F303A1 /* Prefs.swift */,
+				4414867C22B4BBA700F303A1 /* PrefsFile.swift */,
 			);
 			path = ListaCarros;
 			sourceTree = "<group>";
@@ -295,6 +313,8 @@
 		44F5D23022B433080080925A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44F5D24022B49D900080925A /* CoreLocation.framework */,
+				44F5D23E22B49D860080925A /* MapKit.framework */,
 				44F5D23122B433080080925A /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
@@ -410,15 +430,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4406E5DA22AEAF8C0053BBBF /* DetalhesCarroViewController.xib in Resources */,
 				44D0FEEA22B3F67E0026A94F /* refresh.png in Resources */,
 				4411537722A6E46D0023FBCF /* mclaren.png in Resources */,
+				4414868622B4BBA800F303A1 /* DetalhesCarroViewController.xib in Resources */,
 				4411537222A6E46D0023FBCF /* carros_classicos.json in Resources */,
 				4411537822A6E46D0023FBCF /* ferrari_ff.png in Resources */,
 				4411538722A6E60F0023FBCF /* SobreViewController.xib in Resources */,
 				4411537522A6E46D0023FBCF /* tab_carros.png in Resources */,
 				4411537022A6E46D0023FBCF /* carros_luxo.xml in Resources */,
 				44F5D23D22B444CB0080925A /* deleta.png in Resources */,
+				4414869022B644C400F303A1 /* MapViewController.xib in Resources */,
 				4411539622A809770023FBCF /* CarroCell.xib in Resources */,
 				4411536F22A6E46D0023FBCF /* carros_classicos.xml in Resources */,
 				4411537B22A6E46D0023FBCF /* tab_carros@2x.png in Resources */,
@@ -426,7 +447,8 @@
 				4411533B22A6DFEB0023FBCF /* LaunchScreen.storyboard in Resources */,
 				4411537122A6E46D0023FBCF /* carros_esportivos.xml in Resources */,
 				4411537A22A6E46D0023FBCF /* tab_sobre.png in Resources */,
-				4406E5DB22AEAF8C0053BBBF /* ListaCarrosViewController.xib in Resources */,
+				44F5D24322B49F410080925A /* google-maps.png in Resources */,
+				4414868222B4BBA800F303A1 /* ListaCarrosViewController.xib in Resources */,
 				4411537922A6E46D0023FBCF /* Images.xcassets in Resources */,
 				4411537422A6E46D0023FBCF /* carros_esportivos.json in Resources */,
 				4411537322A6E46D0023FBCF /* carros_luxo.json in Resources */,
@@ -455,21 +477,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4414868C22B4BBC700F303A1 /* ListaCarrosViewController.swift in Sources */,
+				4414868722B4BBA800F303A1 /* DownloadImageView.swift in Sources */,
+				4414868422B4BBA800F303A1 /* Prefs.swift in Sources */,
 				4434256122B42ABE00184D60 /* StringUtils.swift in Sources */,
-				44D0FEEF22B4171E0026A94F /* Prefs.swift in Sources */,
-				4406E5DC22AEAF8C0053BBBF /* ListaCarrosViewController.swift in Sources */,
 				44F5D23922B434F10080925A /* SQLiteObjc.m in Sources */,
 				4411539422A808DD0023FBCF /* CarroCell.swift in Sources */,
-				4406E5D622AEAF8C0053BBBF /* DownloadImageView.swift in Sources */,
-				4406E5D822AEAF8C0053BBBF /* DetalhesCarroViewController.swift in Sources */,
+				4414868922B4BBA800F303A1 /* Alerta.swift in Sources */,
 				4411539022A7FF270023FBCF /* Carro.swift in Sources */,
-				4406E5D922AEAF8C0053BBBF /* Alerta.swift in Sources */,
+				4414868522B4BBA800F303A1 /* PrefsFile.swift in Sources */,
+				4414868A22B4BBA800F303A1 /* DetalhesCarroViewController.swift in Sources */,
 				44F5D23B22B4390D0080925A /* CarroDB.swift in Sources */,
 				44F5D23522B434470080925A /* SQLiteHelper.swift in Sources */,
-				4434255B22B4233B00184D60 /* PrefsFile.swift in Sources */,
 				4411538622A6E60F0023FBCF /* SobreViewController.swift in Sources */,
 				4411539222A7FFC40023FBCF /* CarroService.swift in Sources */,
 				4411533122A6DFE90023FBCF /* AppDelegate.swift in Sources */,
+				4414869222B64F5E00F303A1 /* GpsMapViewController.swift in Sources */,
+				4414868F22B644C400F303A1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

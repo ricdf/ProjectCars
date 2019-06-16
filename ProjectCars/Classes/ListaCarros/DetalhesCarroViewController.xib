@@ -22,37 +22,64 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-Lq-fm1">
-                    <rect key="frame" x="7" y="353" width="400" height="352"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxh-3W-MXb">
+                    <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GRQ-5I-lPw" customClass="DownloadImageView" customModule="ProjectCars" customModuleProvider="target">
+                            <rect key="frame" x="32" y="44" width="350" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="hnt-Oz-DJO"/>
+                            </constraints>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-Lq-fm1">
+                            <rect key="frame" x="8" y="220" width="400" height="284"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="scrollIndicatorInsets" minX="400" minY="5" maxX="0.0" maxY="0.0"/>
+                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-c4-MhO">
+                            <rect key="frame" x="356" y="512" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="7vR-U5-YEe"/>
+                                <constraint firstAttribute="height" constant="50" id="ajS-i2-yeZ"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="google-maps.png"/>
+                            <connections>
+                                <action selector="visualizarMapa" destination="-1" eventType="touchDown" id="Qa0-rW-PwZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="352" id="yeb-hO-EWB"/>
+                        <constraint firstAttribute="trailing" secondItem="GRQ-5I-lPw" secondAttribute="trailing" constant="32" id="1FL-DK-fik"/>
+                        <constraint firstAttribute="bottom" secondItem="GRQ-5I-lPw" secondAttribute="bottom" constant="531" id="6jj-OU-VFc"/>
+                        <constraint firstItem="zEO-c4-MhO" firstAttribute="top" secondItem="Oxh-3W-MXb" secondAttribute="top" constant="512" id="CdP-WF-0yo"/>
+                        <constraint firstAttribute="trailing" secondItem="zEO-c4-MhO" secondAttribute="trailing" constant="8" id="H56-jp-3Qq"/>
+                        <constraint firstAttribute="trailing" secondItem="5Wf-Lq-fm1" secondAttribute="trailing" constant="6" id="IXy-6a-Tgr"/>
+                        <constraint firstItem="GRQ-5I-lPw" firstAttribute="leading" secondItem="Oxh-3W-MXb" secondAttribute="leading" constant="32" id="PU9-Ol-gJf"/>
+                        <constraint firstItem="zEO-c4-MhO" firstAttribute="top" secondItem="5Wf-Lq-fm1" secondAttribute="bottom" constant="8" id="WYJ-oE-Cza" userLabel="Button.top = TDesc.bottom + 15"/>
+                        <constraint firstItem="5Wf-Lq-fm1" firstAttribute="leading" secondItem="Oxh-3W-MXb" secondAttribute="leadingMargin" id="fDB-cB-e2j"/>
+                        <constraint firstItem="GRQ-5I-lPw" firstAttribute="top" secondItem="Oxh-3W-MXb" secondAttribute="top" constant="44" id="mEO-cV-NM9"/>
+                        <constraint firstItem="GRQ-5I-lPw" firstAttribute="centerX" secondItem="Oxh-3W-MXb" secondAttribute="centerX" id="t7S-6d-3Oc"/>
+                        <constraint firstItem="5Wf-Lq-fm1" firstAttribute="top" secondItem="GRQ-5I-lPw" secondAttribute="bottom" constant="26" id="uDg-RI-Xi2"/>
                     </constraints>
-                    <inset key="scrollIndicatorInsets" minX="400" minY="5" maxX="0.0" maxY="0.0"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GRQ-5I-lPw" customClass="DownloadImageView" customModule="ProjectCars" customModuleProvider="target">
-                    <rect key="frame" x="7" y="116" width="400" height="180"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="180" id="frR-qY-aBw"/>
-                    </constraints>
-                </imageView>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="5Wf-Lq-fm1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0fm-LA-AfS"/>
-                <constraint firstItem="5Wf-Lq-fm1" firstAttribute="leading" secondItem="GRQ-5I-lPw" secondAttribute="leading" id="3cx-6f-5E7"/>
-                <constraint firstItem="5Wf-Lq-fm1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="7" id="Tym-1p-L4Z"/>
-                <constraint firstItem="5Wf-Lq-fm1" firstAttribute="trailing" secondItem="GRQ-5I-lPw" secondAttribute="trailing" id="lKu-3k-Mkw"/>
-                <constraint firstItem="GRQ-5I-lPw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="pXS-D1-AeL"/>
-                <constraint firstItem="5Wf-Lq-fm1" firstAttribute="top" secondItem="GRQ-5I-lPw" secondAttribute="bottom" constant="57" id="wSc-dq-fAk"/>
+                <constraint firstItem="Oxh-3W-MXb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Aif-r0-7Tq"/>
+                <constraint firstItem="Oxh-3W-MXb" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="EZG-d0-OwN"/>
+                <constraint firstAttribute="trailing" secondItem="Oxh-3W-MXb" secondAttribute="trailing" id="U1z-C1-8Ew"/>
+                <constraint firstItem="Oxh-3W-MXb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="y39-hL-Ixx"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="28.985507246376812" y="119.86607142857142"/>
+            <point key="canvasLocation" x="27.536231884057973" y="118.52678571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="google-maps.png" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
 </document>

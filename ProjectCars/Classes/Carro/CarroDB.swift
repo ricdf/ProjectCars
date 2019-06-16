@@ -13,7 +13,7 @@ class CarroDB {
     var db: SQLiteHelper
     
     init() {
-        self.db = SQLiteHelper(database:"carros.sqlite")
+        self.db = SQLiteHelper(database:"carros.db")
     }
     
     // Cria a tabela carros (apenas se não existe)
@@ -64,7 +64,7 @@ class CarroDB {
             
             print("Carro \(carro.nome), id: \(id) salvo com sucesso.")
             
-            carro.id = Int(id)
+         //   carro.id = Int(id)
             
         } else {
             // Update
