@@ -18,6 +18,17 @@ class DetalhesCarroViewController: UIViewController {
         vc.carro = self.carro
         self.navigationController!.pushViewController(vc, animated: true)
     }
+    @IBAction func visualizarVideo(){
+//        let vc = VideoViewController(nibName: "VideoViewController", bundle: nil)
+//        vc.carro = self.carro
+//        self.navigationController!.pushViewController(vc, animated: true)
+        let videoUtil = VideoUtil()
+        let url = self.carro!.url_video.url()
+        print("Video URL \(url)")
+        videoUtil.playUrlFullScreen(url, viewController: self)
+        
+        
+    }
     
     let imgDeleta = UIImage(named: "deleta.png")?.withRenderingMode(.alwaysOriginal)
 

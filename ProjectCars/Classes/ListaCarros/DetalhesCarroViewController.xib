@@ -35,11 +35,11 @@
                             <rect key="frame" x="8" y="220" width="400" height="284"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <inset key="scrollIndicatorInsets" minX="400" minY="5" maxX="0.0" maxY="0.0"/>
-                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-c4-MhO">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-c4-MhO" userLabel="Button - mapa">
                             <rect key="frame" x="356" y="512" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="7vR-U5-YEe"/>
@@ -50,15 +50,28 @@
                                 <action selector="visualizarMapa" destination="-1" eventType="touchDown" id="Qa0-rW-PwZ"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAN-6e-07g" userLabel="Button - video">
+                            <rect key="frame" x="299" y="517" width="45" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="ynl-uF-IYh"/>
+                            </constraints>
+                            <state key="normal" image="video-player.png"/>
+                            <connections>
+                                <action selector="visualizarVideo" destination="-1" eventType="touchUpInside" id="gcB-L1-Y2U"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="GRQ-5I-lPw" secondAttribute="trailing" constant="32" id="1FL-DK-fik"/>
                         <constraint firstAttribute="bottom" secondItem="GRQ-5I-lPw" secondAttribute="bottom" constant="531" id="6jj-OU-VFc"/>
                         <constraint firstItem="zEO-c4-MhO" firstAttribute="top" secondItem="Oxh-3W-MXb" secondAttribute="top" constant="512" id="CdP-WF-0yo"/>
+                        <constraint firstItem="WAN-6e-07g" firstAttribute="bottom" secondItem="zEO-c4-MhO" secondAttribute="bottom" id="GYH-BG-HMt"/>
                         <constraint firstAttribute="trailing" secondItem="zEO-c4-MhO" secondAttribute="trailing" constant="8" id="H56-jp-3Qq"/>
                         <constraint firstAttribute="trailing" secondItem="5Wf-Lq-fm1" secondAttribute="trailing" constant="6" id="IXy-6a-Tgr"/>
                         <constraint firstItem="GRQ-5I-lPw" firstAttribute="leading" secondItem="Oxh-3W-MXb" secondAttribute="leading" constant="32" id="PU9-Ol-gJf"/>
                         <constraint firstItem="zEO-c4-MhO" firstAttribute="top" secondItem="5Wf-Lq-fm1" secondAttribute="bottom" constant="8" id="WYJ-oE-Cza" userLabel="Button.top = TDesc.bottom + 15"/>
+                        <constraint firstItem="zEO-c4-MhO" firstAttribute="leading" secondItem="WAN-6e-07g" secondAttribute="trailing" constant="12" id="ZBE-ym-xZL"/>
+                        <constraint firstItem="WAN-6e-07g" firstAttribute="top" secondItem="5Wf-Lq-fm1" secondAttribute="bottom" constant="13" id="d37-uu-3Oe"/>
                         <constraint firstItem="5Wf-Lq-fm1" firstAttribute="leading" secondItem="Oxh-3W-MXb" secondAttribute="leadingMargin" id="fDB-cB-e2j"/>
                         <constraint firstItem="GRQ-5I-lPw" firstAttribute="top" secondItem="Oxh-3W-MXb" secondAttribute="top" constant="44" id="mEO-cV-NM9"/>
                         <constraint firstItem="GRQ-5I-lPw" firstAttribute="centerX" secondItem="Oxh-3W-MXb" secondAttribute="centerX" id="t7S-6d-3Oc"/>
@@ -81,5 +94,6 @@
     </objects>
     <resources>
         <image name="google-maps.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="video-player.png" width="405.09890747070312" height="405.09890747070312"/>
     </resources>
 </document>
