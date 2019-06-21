@@ -20,11 +20,11 @@ class VideoViewController: UIViewController {
         let url = self.carro!.url_video.url()
             
             // 1 ) video com WebView
-       //     let request = URLRequest(url: url)
-       //     self.webView.loadRequest(request)
+            let request = URLRequest(url: url)
+            self.webView.loadRequest(request)
             
             // 2 ) reproduz o video sobre uma view de marcacao
-        self.videoUtil.playUrl(url, view: self.webView)
+          //      self.videoUtil.playUrl(url, view: self.webView)
         
             // 3 ) direto com a view especializada de videos , est ano detalhes
         
@@ -37,7 +37,7 @@ class VideoViewController: UIViewController {
     @objc func videoFim(){
         print("Fim do Vídeo")
         //fechar o controller pq o video ja acabou
-       self.navigationController!.popViewController(animated: true)
+     //  self.navigationController!.popViewController(animated: true)
     }
 
 }

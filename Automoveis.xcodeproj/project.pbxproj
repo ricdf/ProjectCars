@@ -42,6 +42,9 @@
 		4414869022B644C400F303A1 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4414868E22B644C400F303A1 /* MapViewController.xib */; };
 		4414869222B64F5E00F303A1 /* GpsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4414869122B64F5E00F303A1 /* GpsMapViewController.swift */; };
 		4434256122B42ABE00184D60 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434256022B42ABD00184D60 /* StringUtils.swift */; };
+		447DBF4F22B99F2C00D6AB07 /* icon_APP.png in Resources */ = {isa = PBXBuildFile; fileRef = 447DBF4E22B99F2C00D6AB07 /* icon_APP.png */; };
+		447DBF5122BAC5A900D6AB07 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DBF5022BAC5A800D6AB07 /* Utils.swift */; };
+		447DBF5322BD2EFA00D6AB07 /* PopoverUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447DBF5222BD2EFA00D6AB07 /* PopoverUtil.swift */; };
 		44D0FEEA22B3F67E0026A94F /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 44D0FEE922B3F67E0026A94F /* refresh.png */; };
 		44F31C5B22B67380009494AF /* video-player.png in Resources */ = {isa = PBXBuildFile; fileRef = 44F31C5A22B67380009494AF /* video-player.png */; };
 		44F31C5E22B67519009494AF /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F31C5C22B67519009494AF /* VideoViewController.swift */; };
@@ -77,14 +80,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4411532D22A6DFE90023FBCF /* ProjectCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4411532D22A6DFE90023FBCF /* Automoveis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automoveis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4411533022A6DFE90023FBCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4411533A22A6DFEB0023FBCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4411533C22A6DFEB0023FBCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4411534122A6DFEB0023FBCF /* ProjectCarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectCarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4411534122A6DFEB0023FBCF /* AutomoveisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomoveisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4411534522A6DFEB0023FBCF /* ProjectCarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCarsTests.swift; sourceTree = "<group>"; };
 		4411534722A6DFEB0023FBCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4411534C22A6DFEB0023FBCF /* ProjectCarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectCarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4411534C22A6DFEB0023FBCF /* AutomoveisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomoveisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4411535022A6DFEB0023FBCF /* ProjectCarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCarsUITests.swift; sourceTree = "<group>"; };
 		4411535222A6DFEB0023FBCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4411536022A6E46D0023FBCF /* carros_classicos.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = carros_classicos.xml; sourceTree = "<group>"; };
@@ -118,6 +121,9 @@
 		4414868E22B644C400F303A1 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		4414869122B64F5E00F303A1 /* GpsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpsMapViewController.swift; sourceTree = "<group>"; };
 		4434256022B42ABD00184D60 /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		447DBF4E22B99F2C00D6AB07 /* icon_APP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_APP.png; sourceTree = "<group>"; };
+		447DBF5022BAC5A800D6AB07 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		447DBF5222BD2EFA00D6AB07 /* PopoverUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverUtil.swift; sourceTree = "<group>"; };
 		44D0FEE922B3F67E0026A94F /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		44F31C5A22B67380009494AF /* video-player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-player.png"; sourceTree = "<group>"; };
 		44F31C5C22B67519009494AF /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoViewController.swift; path = ProjectCars/Classes/ListaCarros/VideoViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -182,9 +188,9 @@
 		4411532E22A6DFE90023FBCF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4411532D22A6DFE90023FBCF /* ProjectCars.app */,
-				4411534122A6DFEB0023FBCF /* ProjectCarsTests.xctest */,
-				4411534C22A6DFEB0023FBCF /* ProjectCarsUITests.xctest */,
+				4411532D22A6DFE90023FBCF /* Automoveis.app */,
+				4411534122A6DFEB0023FBCF /* AutomoveisTests.xctest */,
+				4411534C22A6DFEB0023FBCF /* AutomoveisUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 				4414867B22B4BBA700F303A1 /* Prefs.swift */,
 				4414867C22B4BBA700F303A1 /* PrefsFile.swift */,
 				44F31C6422B7EC38009494AF /* VideoUtil.swift */,
+				447DBF5022BAC5A800D6AB07 /* Utils.swift */,
+				447DBF5222BD2EFA00D6AB07 /* PopoverUtil.swift */,
 				4411533922A6DFEB0023FBCF /* LaunchScreen.storyboard */,
 				4411533C22A6DFEB0023FBCF /* Info.plist */,
 				4411538822A6E62B0023FBCF /* Classes */,
@@ -261,6 +269,7 @@
 		4411536722A6E46D0023FBCF /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				447DBF4E22B99F2C00D6AB07 /* icon_APP.png */,
 				44D0FEE922B3F67E0026A94F /* refresh.png */,
 				44F5D23C22B444CA0080925A /* deleta.png */,
 				44F5D24222B49F410080925A /* google-maps.png */,
@@ -339,9 +348,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4411532C22A6DFE90023FBCF /* ProjectCars */ = {
+		4411532C22A6DFE90023FBCF /* Automoveis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4411535522A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "ProjectCars" */;
+			buildConfigurationList = 4411535522A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "Automoveis" */;
 			buildPhases = (
 				4411532922A6DFE90023FBCF /* Sources */,
 				4411532A22A6DFE90023FBCF /* Frameworks */,
@@ -351,14 +360,14 @@
 			);
 			dependencies = (
 			);
-			name = ProjectCars;
+			name = Automoveis;
 			productName = ProjectCars;
-			productReference = 4411532D22A6DFE90023FBCF /* ProjectCars.app */;
+			productReference = 4411532D22A6DFE90023FBCF /* Automoveis.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4411534022A6DFEB0023FBCF /* ProjectCarsTests */ = {
+		4411534022A6DFEB0023FBCF /* AutomoveisTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4411535822A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "ProjectCarsTests" */;
+			buildConfigurationList = 4411535822A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "AutomoveisTests" */;
 			buildPhases = (
 				4411533D22A6DFEB0023FBCF /* Sources */,
 				4411533E22A6DFEB0023FBCF /* Frameworks */,
@@ -369,14 +378,14 @@
 			dependencies = (
 				4411534322A6DFEB0023FBCF /* PBXTargetDependency */,
 			);
-			name = ProjectCarsTests;
+			name = AutomoveisTests;
 			productName = ProjectCarsTests;
-			productReference = 4411534122A6DFEB0023FBCF /* ProjectCarsTests.xctest */;
+			productReference = 4411534122A6DFEB0023FBCF /* AutomoveisTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4411534B22A6DFEB0023FBCF /* ProjectCarsUITests */ = {
+		4411534B22A6DFEB0023FBCF /* AutomoveisUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4411535B22A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "ProjectCarsUITests" */;
+			buildConfigurationList = 4411535B22A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "AutomoveisUITests" */;
 			buildPhases = (
 				4411534822A6DFEB0023FBCF /* Sources */,
 				4411534922A6DFEB0023FBCF /* Frameworks */,
@@ -387,9 +396,9 @@
 			dependencies = (
 				4411534E22A6DFEB0023FBCF /* PBXTargetDependency */,
 			);
-			name = ProjectCarsUITests;
+			name = AutomoveisUITests;
 			productName = ProjectCarsUITests;
-			productReference = 4411534C22A6DFEB0023FBCF /* ProjectCarsUITests.xctest */;
+			productReference = 4411534C22A6DFEB0023FBCF /* AutomoveisUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -421,7 +430,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4411532822A6DFE90023FBCF /* Build configuration list for PBXProject "ProjectCars" */;
+			buildConfigurationList = 4411532822A6DFE90023FBCF /* Build configuration list for PBXProject "Automoveis" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -434,9 +443,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4411532C22A6DFE90023FBCF /* ProjectCars */,
-				4411534022A6DFEB0023FBCF /* ProjectCarsTests */,
-				4411534B22A6DFEB0023FBCF /* ProjectCarsUITests */,
+				4411532C22A6DFE90023FBCF /* Automoveis */,
+				4411534022A6DFEB0023FBCF /* AutomoveisTests */,
+				4411534B22A6DFEB0023FBCF /* AutomoveisUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -452,6 +461,7 @@
 				4411537222A6E46D0023FBCF /* carros_classicos.json in Resources */,
 				4411537822A6E46D0023FBCF /* ferrari_ff.png in Resources */,
 				4411538722A6E60F0023FBCF /* SobreViewController.xib in Resources */,
+				447DBF4F22B99F2C00D6AB07 /* icon_APP.png in Resources */,
 				4411537522A6E46D0023FBCF /* tab_carros.png in Resources */,
 				44F31C5B22B67380009494AF /* video-player.png in Resources */,
 				4411537022A6E46D0023FBCF /* carros_luxo.xml in Resources */,
@@ -503,6 +513,7 @@
 				4411539422A808DD0023FBCF /* CarroCell.swift in Sources */,
 				4414868922B4BBA800F303A1 /* Alerta.swift in Sources */,
 				4411539022A7FF270023FBCF /* Carro.swift in Sources */,
+				447DBF5322BD2EFA00D6AB07 /* PopoverUtil.swift in Sources */,
 				4414868522B4BBA800F303A1 /* PrefsFile.swift in Sources */,
 				4414868A22B4BBA800F303A1 /* DetalhesCarroViewController.swift in Sources */,
 				44F5D23B22B4390D0080925A /* CarroDB.swift in Sources */,
@@ -511,6 +522,7 @@
 				4411538622A6E60F0023FBCF /* SobreViewController.swift in Sources */,
 				44F31C6522B7EC38009494AF /* VideoUtil.swift in Sources */,
 				4411539222A7FFC40023FBCF /* CarroService.swift in Sources */,
+				447DBF5122BAC5A900D6AB07 /* Utils.swift in Sources */,
 				4411533122A6DFE90023FBCF /* AppDelegate.swift in Sources */,
 				4414869222B64F5E00F303A1 /* GpsMapViewController.swift in Sources */,
 				4414868F22B644C400F303A1 /* MapViewController.swift in Sources */,
@@ -538,12 +550,12 @@
 /* Begin PBXTargetDependency section */
 		4411534322A6DFEB0023FBCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4411532C22A6DFE90023FBCF /* ProjectCars */;
+			target = 4411532C22A6DFE90023FBCF /* Automoveis */;
 			targetProxy = 4411534222A6DFEB0023FBCF /* PBXContainerItemProxy */;
 		};
 		4411534E22A6DFEB0023FBCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4411532C22A6DFE90023FBCF /* ProjectCars */;
+			target = 4411532C22A6DFE90023FBCF /* Automoveis */;
 			targetProxy = 4411534D22A6DFEB0023FBCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -687,6 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69TKL86UBS;
 				INFOPLIST_FILE = ProjectCars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,6 +722,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69TKL86UBS;
 				INFOPLIST_FILE = ProjectCars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -738,7 +752,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectCars.app/ProjectCars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automoveis.app/Automoveis";
 			};
 			name = Debug;
 		};
@@ -759,7 +773,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectCars.app/ProjectCars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Automoveis.app/Automoveis";
 			};
 			name = Release;
 		};
@@ -806,7 +820,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4411532822A6DFE90023FBCF /* Build configuration list for PBXProject "ProjectCars" */ = {
+		4411532822A6DFE90023FBCF /* Build configuration list for PBXProject "Automoveis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4411535322A6DFEB0023FBCF /* Debug */,
@@ -815,7 +829,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4411535522A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "ProjectCars" */ = {
+		4411535522A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "Automoveis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4411535622A6DFEB0023FBCF /* Debug */,
@@ -824,7 +838,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4411535822A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "ProjectCarsTests" */ = {
+		4411535822A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "AutomoveisTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4411535922A6DFEB0023FBCF /* Debug */,
@@ -833,7 +847,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4411535B22A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "ProjectCarsUITests" */ = {
+		4411535B22A6DFEB0023FBCF /* Build configuration list for PBXNativeTarget "AutomoveisUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4411535C22A6DFEB0023FBCF /* Debug */,

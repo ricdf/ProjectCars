@@ -12,42 +12,77 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var listaController : ListaCarrosViewController?
+    var detalhesController : DetalhesCarroViewController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.backgroundColor = UIColor.white
         
-        //criar os controllers
-        let listaController = ListaCarrosViewController(nibName: "ListaCarrosViewController", bundle: nil)
-        let sobreController = SobreViewController(nibName: "SobreViewController", bundle: nil)
-        let nav1 = UINavigationController()
-        let nav2 = UINavigationController()
-        
-        //inserir os views controllers na navigation controllers
-        nav1.pushViewController(listaController, animated: false)
-        nav2.pushViewController(sobreController, animated: false)
-        
-        //criar a TabBar
-        let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [nav1,nav2]
-        
-        nav1.tabBarItem.title = "Carros"
-        nav1.tabBarItem.image = UIImage(named: "tab_carros.png")
-        nav2.tabBarItem.title = "Sobre"
-        nav2.tabBarItem.image = UIImage(named: "tab_sobre.png")
-    
-        self.window!.rootViewController = tabBarController
-        self.window!.makeKeyAndVisible()
+        //se iPad ou iPhone : para iPad usar Split View
+        let iPad = Utils.isIpad()
+        if(iPad){
+            self.initIpad()
+        }else{
+            self.initIphone()
+        }
         
         //crair o banco de dados e as tabelas
         let db = CarroDB()
         db.createTables()
         db.close()
         
+        //mostra a janela
+        self.window!.makeKeyAndVisible()
+        
         return true
     }
+    
+    //cria view para iphone com Tab Bar
+    func initIphone() {
+        let listaController = ListaCarrosViewController(nibName: "ListaCarrosViewController", bundle: nil)
+        let sobreController = SobreViewController(nibName: "SobreViewController", bundle: nil)
+        
+        let nav1 = UINavigationController()
+        let nav2 = UINavigationController()
+        
+        nav1.pushViewController(listaController, animated: false)
+        nav2.pushViewController(sobreController, animated: false)
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [nav1,nav2]
+        
+        nav1.tabBarItem.title = "Carros"
+        nav1.tabBarItem.image = UIImage(named:"tab_carros.png")
+        nav2.tabBarItem.title = "Sobre"
+        nav2.tabBarItem.image = UIImage(named:"tab_sobre.png")
+        
+        self.window!.rootViewController = tabBarController
+        
+    }
+    
+    func initIpad() {
+        // Cria os controllers da Esquerda e Direita
+        self.detalhesController = DetalhesCarroViewController()
+        self.listaController = ListaCarrosViewController()
+        
+        let nav1 = UINavigationController()
+        let nav2 = UINavigationController()
+        
+        nav1.pushViewController(listaController!, animated: false)
+        nav2.pushViewController(detalhesController!, animated: false)
+
+        // Cria o UISplitViewController
+        let split = UISplitViewController()
+        split.delegate = detalhesController
+        split.viewControllers = [nav1, nav2]
+        
+        // Deixa o UISplitViewController como o controller principal
+        self.window!.rootViewController = split
+    }
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

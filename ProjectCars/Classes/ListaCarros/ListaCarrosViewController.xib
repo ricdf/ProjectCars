@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaCarrosViewController" customModule="ProjectCars" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaCarrosViewController" customModule="Automoveis" customModuleProvider="target">
             <connections>
                 <outlet property="progress" destination="Zha-9p-H9i" id="tM5-YH-eEB"/>
                 <outlet property="segmentControl" destination="g8M-N6-NNe" id="DLM-ae-hJ7"/>
@@ -20,15 +20,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gf6-3Z-Jde">
-                    <rect key="frame" x="0.0" y="190" width="414" height="623"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g8M-N6-NNe">
-                    <rect key="frame" x="89" y="124" width="236" height="29"/>
+                    <rect key="frame" x="394" y="106" width="236" height="29"/>
                     <segments>
                         <segment title="Clássicos"/>
                         <segment title="Esportivos"/>
@@ -38,19 +34,25 @@
                         <action selector="alteraTipoWithSender:" destination="-1" eventType="valueChanged" id="OGr-BF-zVK"/>
                     </connections>
                 </segmentedControl>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zha-9p-H9i">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zha-9p-H9i">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gf6-3Z-Jde">
+                    <rect key="frame" x="0.0" y="172" width="1024" height="546"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="gf6-3Z-Jde" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="102" id="89T-5X-Nbv"/>
-                <constraint firstItem="gf6-3Z-Jde" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Aij-C6-EgV"/>
-                <constraint firstItem="gf6-3Z-Jde" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F1c-kY-IVa"/>
-                <constraint firstItem="g8M-N6-NNe" firstAttribute="centerX" secondItem="gf6-3Z-Jde" secondAttribute="centerX" id="Kn9-zL-Dez"/>
-                <constraint firstItem="g8M-N6-NNe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="hxj-a8-cKU"/>
-                <constraint firstAttribute="trailing" secondItem="gf6-3Z-Jde" secondAttribute="trailing" id="tpA-cF-Vul"/>
+                <constraint firstItem="g8M-N6-NNe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4GK-nJ-ZEV"/>
+                <constraint firstItem="Zha-9p-H9i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="197" id="6On-pl-2XH"/>
+                <constraint firstItem="g8M-N6-NNe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="b6c-fq-9AZ"/>
+                <constraint firstItem="g8M-N6-NNe" firstAttribute="centerX" secondItem="gf6-3Z-Jde" secondAttribute="centerX" id="dCs-BD-yeO"/>
+                <constraint firstItem="gf6-3Z-Jde" firstAttribute="top" secondItem="g8M-N6-NNe" secondAttribute="bottom" constant="38" id="dTa-m7-n7r"/>
+                <constraint firstItem="g8M-N6-NNe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="jeM-NX-UQu"/>
+                <constraint firstItem="Zha-9p-H9i" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="368" id="nO9-ES-Gtu"/>
+                <constraint firstItem="gf6-3Z-Jde" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w1J-JH-G2i"/>
+                <constraint firstItem="gf6-3Z-Jde" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ylG-DI-UUE"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

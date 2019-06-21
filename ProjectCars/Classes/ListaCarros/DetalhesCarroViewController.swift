@@ -8,26 +8,53 @@
 
 import UIKit
 
-class DetalhesCarroViewController: UIViewController {
+class DetalhesCarroViewController: UIViewController, UISplitViewControllerDelegate {
 
     @IBOutlet var img : DownloadImageView!
     @IBOutlet var tDesc : UITextView!
-    @IBAction func visualizarMapa(){
-     //   let vc = MapViewController(nibName: "MapViewController", bundle: nil)
+    
+    @IBAction func visualizarMapa(bt: UIButton){
+        
         let vc = GpsMapViewController(nibName: "MapViewController", bundle: nil)
         vc.carro = self.carro
-        self.navigationController!.pushViewController(vc, animated: true)
+        if(Utils.isIphone()){
+            self.navigationController!.pushViewController(vc, animated: true)
+        } else {
+            
+            print("Mostra no popover")
+            // Tamanho da janela
+            vc.preferredContentSize = CGSize(width: 500, height: 300)
+            vc.modalPresentationStyle = UIModalPresentationStyle.popover;
+            // Origem do popover
+            let popoverPresentationController = vc.popoverPresentationController
+            popoverPresentationController?.sourceView = bt
+            // Mostra o view controller como popover
+            present(vc, animated: true, completion: nil)
+        
+        }
     }
-    @IBAction func visualizarVideo(){
-//        let vc = VideoViewController(nibName: "VideoViewController", bundle: nil)
-//        vc.carro = self.carro
-//        self.navigationController!.pushViewController(vc, animated: true)
-        let videoUtil = VideoUtil()
-        let url = self.carro!.url_video.url()
-        print("Video URL \(url)")
-        videoUtil.playUrlFullScreen(url, viewController: self)
-        
-        
+    @IBAction func visualizarVideo(bt: UIButton){
+
+        if(Utils.isIphone()){
+            let videoUtil = VideoUtil()
+            let url = self.carro!.url_video.url()
+            print("Video URL \(url)")
+            videoUtil.playUrlFullScreen(url, viewController: self)
+        } else {
+
+            print("Mostra no popover")
+            let vc = VideoViewController(nibName: "VideoViewController", bundle: nil)
+            vc.carro = self.carro
+            // Tamanho da janela
+            vc.preferredContentSize = CGSize(width: 550, height: 250)
+            vc.modalPresentationStyle = UIModalPresentationStyle.popover;
+            // Origem do popover
+            let popoverPresentationController = vc.popoverPresentationController
+            popoverPresentationController?.sourceView = bt
+            // Mostra o view controller como popover
+            present(vc, animated: true, completion: nil)
+
+        }
     }
     
     let imgDeleta = UIImage(named: "deleta.png")?.withRenderingMode(.alwaysOriginal)
@@ -42,27 +69,12 @@ class DetalhesCarroViewController: UIViewController {
             self.title = c.nome
             self.tDesc.text = c.desc
             self.img.setUrl(c.url_foto)
+            //para atualizar o carro selecionado quando for ipad
+            updateCarro(c)
             //inserir botao de deletar na navigation bar
             let btDeleta = UIBarButtonItem(image: imgDeleta, style: .plain, target: self, action: #selector(DetalhesCarroViewController.onClickDeletar))
             self.navigationItem.rightBarButtonItem = btDeleta
         }
-    }
-
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        var text=""
-        switch UIDevice.current.orientation{
-        case .portrait:
-            text="Portrait"
-        case .portraitUpsideDown:
-            text="PortraitUpsideDown"
-        case .landscapeLeft:
-            text="LandscapeLeft"
-        case .landscapeRight:
-            text="LandscapeRight"
-        default:
-            text="Another"
-        }
-        NSLog("You have moved: \(text)")
     }
 
     @objc func  onClickDeletar() {
@@ -86,6 +98,40 @@ class DetalhesCarroViewController: UIViewController {
     
     func goBack(){
         self.navigationController!.popViewController(animated: true)
+    }
+    
+    func updateCarro(_ c: Carro) {
+        
+        self.carro = c
+        self.title = c.nome
+        self.tDesc.text = c.desc;
+        self.img.setUrl(c.url_foto)
+    }
+    
+    func splitViewController(_ svc: UISplitViewController, willChangeTo displayMode: UISplitViewController.DisplayMode) {
+        
+        let vertical = displayMode == UISplitViewController.DisplayMode.primaryHidden
+        if (vertical){
+            
+            //insere o botao na navigation bar
+            let btPopover = UIBarButtonItem(title: "Lista", style: UIBarButtonItem.Style.plain, target: self, action: #selector(DetalhesCarroViewController.onClickPopover))
+            self.navigationItem.leftBarButtonItem = btPopover
+        }else{
+            
+            //remove o botao se esta na horizontal
+            self.navigationItem.leftBarButtonItem = nil
+        }
+    }
+    
+    @IBAction func onClickPopover() {
+
+        //mostrar o view controller no popover
+        let bt = self.navigationItem.leftBarButtonItem!
+        let vc = ListaCarrosViewController()
+        
+        //mostra o popover ancorado no botao de navgation bar
+        PopoverUtil.show(self, viewController: vc, source: bt, width: 400, height: 800)
+        
     }
     
 

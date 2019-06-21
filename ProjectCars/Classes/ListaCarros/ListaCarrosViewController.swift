@@ -15,8 +15,9 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
     @IBOutlet var segmentControl : UISegmentedControl!
     
     var carros : Array<Carro> = []
-    var tipo : String = "classicos"
+    var tipo = "classicos"
     let imgRefresh = UIImage(named: "refresh.png")?.withRenderingMode(.alwaysOriginal)
+    var cache = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +27,14 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
         //delegate
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register (UITableViewCell.self, forCellReuseIdentifier: "cell")
+        // Para o scroll começar na posição do TableView
+        self.automaticallyAdjustsScrollViewInsets = false;
+     //   self.tableView.register (UITableViewCell.self, forCellReuseIdentifier: "cell")
 
         //registrar no tableview que sera utilizado o CarroCell.xib
         let xib = UINib(nibName: "CarroCell", bundle: nil)
         self.tableView.register(xib, forCellReuseIdentifier: "cell")
-        self.buscarCarros(true) //busca carro com cache
+      //  self.buscarCarros(true) //busca carro com cache
         
         //botao refresh na navigation bar
         let btAtualizar = UIBarButtonItem(image: imgRefresh, style: .plain, target: self, action: #selector(ListaCarrosViewController.atualizar))
@@ -40,17 +43,21 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
         //recuperar o tipo salvo nas preferencia, tipo do carro do usuario que deixou na ultima vez q usou o app
         let idx = Prefs.getInt("tipoIdx")
         let s = Prefs.getString("tipoString")
-        if(s != nil){ // a string é opcional , precisamos testar antes
+        if(s != ""){ // a string é opcional , precisamos testar antes
             self.tipo = s!
         }
-         self.segmentControl.selectedSegmentIndex = idx
-       // self.buscarCarros(true) //busca carro com cache
+        // Atualiza o índice no segment control
+        self.segmentControl.selectedSegmentIndex = idx
         
+        if(Utils.isIpad() && Utils.isPortrait()) {
+            print("ipad vert")
+            self.buscarCarros()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-           self.buscarCarros(true) //busca carro com cache, sempre q a tela é exibida ao usuario
+           self.buscarCarros() //busca carro com cache, sempre q a tela é exibida ao usuario
         print(carros.count)
     }
 
@@ -74,11 +81,20 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let linha = indexPath.row
         let carro = self.carros[linha]
-        //criar view controller para navegar para a tela de detalhes
-        let vc = DetalhesCarroViewController(nibName: "DetalhesCarroViewController", bundle: nil)
-        vc.carro = carro
-        self.navigationController!.pushViewController(vc, animated: true)
-       // Alerta.alerta("Clicou no carro \(carro.nome)", viewController: self)
+        
+        if(Utils.isIphone()){
+            //criar view controller para navegar para a tela de detalhes
+            let vc = DetalhesCarroViewController(nibName: "DetalhesCarroViewController", bundle: nil)
+            vc.carro = carro
+            self.navigationController!.pushViewController(vc, animated: true)
+            
+        } else {
+            // se for ipad
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let detalhes = appDelegate.detalhesController!
+            detalhes.updateCarro(carro)
+        }
+        // Alerta.alerta("Clicou no carro \(carro.nome)", viewController: self)
     }
     
     @IBAction func alteraTipo(sender: UISegmentedControl){
@@ -98,27 +114,57 @@ class ListaCarrosViewController: UIViewController , UITableViewDataSource, UITab
         Prefs.setString(tipo, chave: "tipoString")
         
         //buscar os carros pelo tipo selecionado
-        self.buscarCarros(true) //busca carro com cache
+        self.buscarCarros() //busca carro com cache
     }
     
-    func buscarCarros(_ cache: Bool){
-        progress.startAnimating()
-        let callback = { (_ carros: Array<Carro>?, error:Error?) -> Void in
-       // CarroService.getCarrosByTipo(tipo, { (_ carros: Array<Carro>?, error:Error?) -> Void in
+    func buscarCarros() {
         
-            if let carros = carros{
-                self.carros = carros
-                self.tableView.reloadData()
-                self.progress.stopAnimating()
-            }else if let error = error{
+        self.progress.startAnimating()
+        
+        let funcaoRetorno = { (_ carros:Array<Carro>?, error:Error?) -> Void in
+            
+            if let error = error {
+                
                 Alerta.alerta("Erro: " + error.localizedDescription, viewController: self)
+                
+            } else if let carros = carros {
+                
+                self.carros = carros
+                
+                // Atualiza o TableView
+                self.tableView!.reloadData()
+                
+                if(Utils.isIpad() && carros.count > 0) {
+                    // Seta o primeiro carro na direita
+                    let c = carros[0]
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    let detalhes = appDelegate.detalhesController!
+                    detalhes.updateCarro(c)
+                }
             }
+            
+            self.progress.stopAnimating()
         }
-        CarroService.getCarrosByTipo(tipo, cache, callback)
+        
+        CarroService.getCarrosByTipo(self.tipo, cache:self.cache , callback:funcaoRetorno)
+        
+        // Faz cache da próxima vez
+        cache = true
     }
         
     @objc func atualizar(){
-        buscarCarros(false)
+        buscarCarros()
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        
+        if(Utils.isIphone()){
+            //iphone: apenas vertical
+            return UIInterfaceOrientationMask.portrait
+        } else {
+            //ipad: todas as orientacoes permitidas
+            return UIInterfaceOrientationMask.all
+        }
     }
 }
         

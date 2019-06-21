@@ -6,7 +6,7 @@
 	<string>Permitir ler os dados do GPS ?</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>IconAPP.png</string>
+		<string>Icon_APP.png</string>
 	</array>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
